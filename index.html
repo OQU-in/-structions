@@ -238,6 +238,19 @@
         .green-notice p { margin: 0; }
         .green-notice p:not(:last-child) { margin-bottom: 10px; }
 
+        /* Синяя рамка для информационных сообщений */
+        .blue-notice {
+            background-color: var(--primary-light);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #1e3a8a;
+        }
+        .blue-notice p { margin: 0; }
+        .blue-notice p:not(:last-child) { margin-bottom: 10px; }
+
         .step-auth { margin-bottom: 35px; padding-left: 45px; position: relative; }
         .step-auth::before {
             content: attr(data-step);
@@ -250,6 +263,24 @@
         }
 
         .instruction-img { width: 100%; border-radius: 10px; margin: 15px 0; border: 1px solid #eee; display: block; }
+
+        /* Стили для адаптивного контейнера видео */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin-top: 15px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
         .content-next-btn {
             display: inline-block;
@@ -344,6 +375,9 @@
                 <div class="sidebar-part-title">📋 Часть II. Обработка</div>
                 <a href="#step5" class="sidebar-nav-link">5. Проверить заявки</a>
                 <a href="#step6" class="sidebar-nav-link">6. Подписать заявки</a>
+
+                <div class="sidebar-part-title">👨‍👩‍👦 Часть III. Родителям</div>
+                <a href="#part3" class="sidebar-nav-link">Подача со стороны родителя</a>
             </div>
             
             <div class="sidebar-faq-box">
@@ -497,7 +531,7 @@
                 </div>
 
                 <div class="step-auth" data-step="2">
-                    <p>Нажмите на иконку глаза рядом с заявкой и откройте карточку заявки. Примите решение и нажмите кнопку «Принять» или «Отказать».</p>
+                    <p>Нажмите на iконку глаза рядом с заявкой и откройте карточку заявки. Примите решение и нажмите кнопку «Принять» или «Отказать».</p>
                     <img src="step19.png" class="instruction-img" alt="Просмотр карточки заявки">
                 </div>
 
@@ -535,6 +569,28 @@
                 <img src="step24.png" class="instruction-img" alt="Отправка на доработку - Шаг 1">
                 <img src="step25.png" class="instruction-img" alt="Отправка на доработку - Шаг 2">
                 
+                <div style="text-align: right; margin-top: 30px;">
+                    <a href="#part3" class="content-next-btn">Далее: Часть III →</a>
+                </div>
+            </div>
+
+
+            <div class="page-break-block part-header-box" id="part3">
+                <h2><span>👨‍👩‍👦</span> Часть III. Подача заявки со стороны родителя</h2>
+            </div>
+
+            <div class="white-box">
+                <p style="font-size: 1.1rem; line-height: 1.6;">В данном разделе описан процесс подачи заявки родителем для общего понимания процесса сотрудником.</p>
+                
+                <div class="blue-notice">
+                    <p>Если у родителя возникнут вопросы по онлайн-подаче заявки, ему необходимо обратиться в Единый контакт-центр по номеру <b>1414</b>.</p>
+                </div>
+
+                <p style="font-weight: bold; margin-top: 25px; margin-bottom: 5px;">📹 Видеоинструкция для родителей:</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ссылка_на_видео" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
                 <div style="text-align: right; margin-top: 30px;">
                     <a href="#questions" class="content-next-btn">Перейти к часто задаваемым вопросам</a>
                 </div>
