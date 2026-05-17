@@ -29,6 +29,25 @@
             text-align: center;
         }
 
+        /* Выделенный важный текст на первом экране */
+        .important-alert {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffeb3b;
+            margin: 15px 0;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        .important-alert a {
+            color: #ffeb3b;
+            text-decoration: underline;
+        }
+        .important-alert a:hover {
+            text-decoration: none;
+        }
+
         /* ЭКРАН 2: ФОТО M1.PNG */
         .image-hero-section {
             background-color: white;
@@ -228,6 +247,11 @@
     <section class="hero-section">
         <div style="max-width: 850px; padding: 20px;">
             <h1 style="font-size: 2.5rem; font-weight: 800;">Уважаемые сотрудники организаций среднего образования!</h1>
+            
+            <div class="important-alert">
+                Приём заявок на зачисление в 1 класс осуществляется только через платформу <a href="https://oqu.edu.kz/" target="_blank">oqu.edu.kz</a>.
+            </div>
+
             <p style="font-size: 1.4rem; opacity: 0.9;">Данная инструкция по приему заявок на зачисление в 1 класс предназначена для директоров и сотрудников школ. В ней представлены ответы на все вопросы, связанные с использованием платформы.</p>
             <a href="#hero-image" class="btn-main">ДАЛЕЕ</a>
         </div>
@@ -286,6 +310,7 @@
                     <a href="https://example.com/video" target="_blank">Смотреть видеоинструкцию</a>
                 </div>
             </div>
+                
             <div class="white-box" id="step1">
                 <div class="step-title"><span class="step-label">Шаг-1.</span><span>Авторизация</span></div>
                 <p>Перейдите на <a href="https://oqu.edu.kz/">oqu.edu.kz</a> и нажмите «Войти».</p>
@@ -376,7 +401,7 @@
                 <h4 style="margin-top: 25px;">Микроучасток</h4>
                 <details>
                     <summary>Что такое микроучасток?</summary>
-                    <div class="faq-ans">Микроучасток — территория обслуживания школы: список конкреätzen адресов (улиц и домов), закрепленных за вашей организацией. По микроучастку система определяет, какие школы доступны заявителю при подаче заявления.</div>
+                    <div class="faq-ans">Микроучасток — территория обслуживания школы: список конкретных адресов (улиц и домов), закрепленных за вашей организацией. По микроучастку система определяет, какие школы доступны заявителю при подаче заявления.</div>
                 </details>
                 <details>
                     <summary>Как добавить адрес в микроучасток?</summary>
