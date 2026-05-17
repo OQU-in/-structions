@@ -29,7 +29,7 @@
             text-align: center;
         }
 
-        /* ЭКРАН 2: ФОТО M1.PNG (ИСПРАВЛЕНО: min-height вместо height) */
+        /* ЭКРАН 2: ФОТО M1.PNG */
         .image-hero-section {
             background-color: white;
             min-height: 100vh;
@@ -48,7 +48,6 @@
             overflow: hidden;
             border: 1px solid #eee;
         }
-        /* Ограничиваем высоту картинки, чтобы она не вылезала за экран */
         .hero-img-container img { 
             width: 100%; 
             max-height: 65vh; 
@@ -190,6 +189,23 @@
             font-weight: bold;
         }
 
+        .video-link-box {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px dashed rgba(46, 125, 50, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+        .video-link-box a {
+            color: #2e7d32;
+            text-decoration: underline;
+        }
+        .video-link-box a:hover {
+            text-decoration: none;
+        }
+
         .blue-notice {
             background-color: var(--primary-light);
             border: 2px solid var(--primary);
@@ -201,12 +217,6 @@
 
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-top: 15px; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-        .content-next-btn {
-            display: inline-block; background: var(--primary); color: white;
-            padding: 15px 35px; text-decoration: none; border-radius: 8px;
-            font-weight: 900; text-transform: uppercase;
-        }
 
         details { background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid var(--faq-border); }
         summary { font-weight: bold; cursor: pointer; color: #1e293b; }
@@ -236,7 +246,7 @@
                 В первую очередь директору школы необходимо подготовить личный кабинет на платформе. <br> 
                 <span style="color: var(--primary);">Для этого, ознакомьтесь с подготовительной частью.</span>
             </div>
-            <a href="#guide-start" class="btn-next-step">НАЧАТЬ ИНСТРУКЦИЮ</a>
+            <a href="#guide-start" class="btn-next-step">НАЧАТЬ</a>
         </div>
     </section>
 
@@ -248,7 +258,7 @@
                 <a href="#step1" class="sidebar-nav-link">1. Авторизация</a>
                 <a href="#step2" class="sidebar-nav-link">2. Добавление сотрудников</a>
                 <a href="#step3" class="sidebar-nav-link">3. Лимиты классов</a>
-                <a href="#step4" class="sidebar-nav-link">4. Микроучасток</a>
+                <a href="#step4" class="sidebar-nav-link">4. Микроучастки</a>
                 
                 <div class="sidebar-part-title">📋 Часть II. Обработка</div>
                 <a href="#step5" class="sidebar-nav-link">5. Проверить заявки</a>
@@ -271,8 +281,11 @@
 
             <div class="green-notice">
                 <p>Действия, указанные в данной части обязательны к выполнению - это необходимо для корректного принятия заявок. Выполняет их директор школы.</p>
+                <div class="video-link-box">
+                    <span>📹 Ссылка на видео:</span> 
+                    <a href="https://example.com/video" target="_blank">Смотреть видеоинструкцию</a>
+                </div>
             </div>
-                
             <div class="white-box" id="step1">
                 <div class="step-title"><span class="step-label">Шаг-1.</span><span>Авторизация</span></div>
                 <p>Перейдите на <a href="https://oqu.edu.kz/">oqu.edu.kz</a> и нажмите «Войти».</p>
@@ -308,7 +321,7 @@
             </div>
 
             <div class="white-box" id="step4">
-                <div class="step-title"><span class="step-label">Шаг-4.</span><span>Микроучасток</span></div>
+                <div class="step-title"><span class="step-label">Шаг-4.</span><span>Микроучастки</span></div>
                 <p>Проверить адреса, закрепленные за организацией, можно в разделе «Моя организация» → «Микроучасток».</p>
                 <img src="step14.png" class="instruction-img">
                 <p>В этом разделе отображается микроучасток вашей школы. Чтобы добавить новый адрес, нажмите «Добавить адрес».</p>
@@ -321,7 +334,7 @@
                 
             <div class="white-box" id="step5">
                 <div class="step-title"><span class="step-label">Шаг-5.</span><span>Проверить заявки</span></div>
-                <p>Иполнитель проверяет документы в разделе «Необработанные заявки».</p>
+                <p>Исполнитель проверяет документы в разделе «Необработанные заявки».</p>
                 <img src="step18.png" class="instruction-img">
             </div>
 
@@ -363,7 +376,7 @@
                 <h4 style="margin-top: 25px;">Микроучасток</h4>
                 <details>
                     <summary>Что такое микроучасток?</summary>
-                    <div class="faq-ans">Микроучасток — территория обслуживания школы: список конкретных адресов (улиц и домов), закрепленных за вашей организацией. По микроучастку система определяет, какие школы доступны заявителю при подаче заявления.</div>
+                    <div class="faq-ans">Микроучасток — территория обслуживания школы: список конкреätzen адресов (улиц и домов), закрепленных за вашей организацией. По микроучастку система определяет, какие школы доступны заявителю при подаче заявления.</div>
                 </details>
                 <details>
                     <summary>Как добавить адрес в микроучасток?</summary>
