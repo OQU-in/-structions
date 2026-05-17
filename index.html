@@ -29,15 +29,16 @@
             text-align: center;
         }
 
-        /* ЭКРАН 2: ФОТО M1.PNG */
+        /* ЭКРАН 2: ФОТО M1.PNG (ИСПРАВЛЕНО: min-height вместо height) */
         .image-hero-section {
             background-color: white;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 40px;
+            box-sizing: border-box;
         }
         .hero-img-container {
             max-width: 1000px;
@@ -47,7 +48,13 @@
             overflow: hidden;
             border: 1px solid #eee;
         }
-        .hero-img-container img { width: 100%; display: block; }
+        /* Ограничиваем высоту картинки, чтобы она не вылезала за экран */
+        .hero-img-container img { 
+            width: 100%; 
+            max-height: 65vh; 
+            object-fit: contain; 
+            display: block; 
+        }
 
         /* ЭКРАН 3: ТЕКСТ О ПОДГОТОВКЕ */
         .intro-section {
@@ -217,7 +224,6 @@
     </section>
 
     <section id="hero-image" class="image-hero-section">
-        <h2 style="margin-bottom: 30px; color: var(--primary);">Обзор интерфейса платформы</h2>
         <div class="hero-img-container">
             <img src="m1.png" alt="Интерфейс системы">
         </div>
